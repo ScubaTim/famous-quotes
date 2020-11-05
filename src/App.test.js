@@ -11,28 +11,20 @@ const findByTestAttr = (wrapper, val) => {
     return wrapper.find(`[data-test='${val}']`);
 };
 
-test('renders the App component', () => {
+test('renders App component', () => {
     const wrapper = setup();
     const appComponent = findByTestAttr(wrapper, "component-app");
     expect(appComponent.length).toBe(1);
 })
 
 test('renders button', () => {
-
+    const wrapper = setup();
+    const buttonComponent = findByTestAttr(wrapper, "component-button");
+    expect(buttonComponent.length).toBe(1);
 })
 
-test('connects to quotes API', () => {
-
-})
-
-test('recieves data from quotes API', () => {
-
-})
-
-test('renders data from quote API', () => {
-
-})
-
-test('generates new quote when button is clicked', () => {
-
+test('renders quote', () => {
+    const wrapper = setup();
+    const quoteComponent = findByTestAttr(wrapper, "component-quote");
+    expect(quoteComponent.length).toBe(1)
 })
