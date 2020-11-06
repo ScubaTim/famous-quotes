@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-const getRandomQuote = async (setRandomQuote) => {
+const getRandomQuotes = async (setRandomQuotes) => {
     const response = await axios.get('https://type.fit/api/quotes')
-    console.log('inside getRandomQuotes call response.data', response.data)  //
-    setRandomQuote(response.data)
+    setRandomQuotes(response.data)
 }
 
-export default getRandomQuote;
+export default getRandomQuotes;
 
 

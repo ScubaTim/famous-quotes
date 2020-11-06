@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import {
   Card, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
+import getRandomQuotes from './actions/hookActions';
 
 function App() {
   const [randomQuotes, setRandomQuotes] = useState([])
@@ -14,11 +14,7 @@ function App() {
   });
 
   useEffect(() => {
-    const getQuotes = async () => {
-      const response = await axios.get('https://type.fit/api/quotes')
-      setRandomQuotes(response.data)
-  }
-  getQuotes().catch(error => console.log(`There was an error ${error}`))
+    getRandomQuotes(setRandomQuotes)
   },[])
 
   const getRandomQuote = () => {
@@ -27,21 +23,19 @@ function App() {
     setQuote(randomQuote)
   }
 
-  console.log(quote)
-
   return (
     <div data-test="component-app" className="bg-primary d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
       <div className="shadow">
-      <Card data-test="component-card" color="light" style={{minWidth:"320px", width:"30vw"}}>
+      <Card data-test="component-card" color="light" style={{minWidth:"320px", width:"28vw"}}>
         <CardBody>
           <CardTitle tag="h1" className="text-center text-uppercase my-2">A Famous Quote</CardTitle>
           <CardSubtitle className="text-center text-uppercase font-weight-bold text-secondary">Randomly Selected</CardSubtitle>
           <hr className="mt-3" />
-          <div className="px-4 pt-4 pb-5">
+          <div className="mx-4 pt-4 pb-5">
             <CardText data-test="component-quote">
               {quote.text}
             </CardText>
-            <p className="text-right px-4">{quote.author ? `~ ${quote.author}` : ''}</p>
+            <p className="text-right pr-1">{quote.author ? `~ ${quote.author}` : ''}</p>
           </div>
           <div className="d-flex mx-4 mb-4">
           <Button color="success" block data-test="component-button" onClick={() => getRandomQuote()}>Random Quote</Button>

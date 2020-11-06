@@ -17,13 +17,13 @@ test('renders App component', () => {
     expect(appComponent.length).toBe(1);
 })
 
-test('renders button', () => {
+test('renders button component', () => {
     const wrapper = setup();
     const buttonComponent = findByTestAttr(wrapper, "component-button");
     expect(buttonComponent.length).toBe(1);
 })
 
-test('renders quote', () => {
+test('renders quote component', () => {
     const wrapper = setup();
     const quoteComponent = findByTestAttr(wrapper, "component-quote");
     expect(quoteComponent.length).toBe(1)
