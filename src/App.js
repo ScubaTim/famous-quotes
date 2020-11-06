@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <div data-test="component-app" className="bg-primary d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
+    <div data-test="component-app" className="d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
       <div className="shadow">
       <Card data-test="component-card" color="light" style={{minWidth:"320px", width:"28vw"}}>
         <CardBody>
@@ -35,10 +35,10 @@ function App() {
             <CardText data-test="component-quote">
               {quote.text}
             </CardText>
-            <p className="text-right pr-1">{quote.author ? `~ ${quote.author}` : ''}</p>
+            <p className="text-right pr-2">{quote.author ? `~ ${quote.author}` : ''}</p>
           </div>
           <div className="d-flex mx-4 mb-4">
-          <Button color="success" block data-test="component-button" onClick={() => getRandomQuote()}>Random Quote</Button>
+          <Button block data-test="component-button" className="text-white bg-dark" onClick={() => getRandomQuote()}>Random Quote</Button>
           </div>
           <div>
             <hr />

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Fira+Sans+Extra+Condensed:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Fira+Sans+Condensed:wght@900&display=swap");
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -6,7 +7,7 @@ body {
   height: 100vh;
   width: 100vw;
   font-family: "Fira Sans", sans-serif;
-  background-color: #007bff !important;
+  background-color: paleturquoise;
 }
 
 h1,
@@ -14,7 +15,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+a {
+  color: cornflowerblue;
 }
 
 a:hover {
