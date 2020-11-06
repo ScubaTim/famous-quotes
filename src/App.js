@@ -25,8 +25,8 @@ function App() {
 
   return (
     <div data-test="component-app" className="d-flex justify-content-center align-items-center" style={{height: "100vh"}}>
-      <div className="shadow">
-      <Card data-test="component-card" color="light" style={{minWidth:"320px", width:"28vw"}}>
+      <div className="shadow-lg">
+      <Card data-test="component-card" color="light"  className="shadow" style={{minWidth:"320px", width:"28vw"}}>
         <CardBody>
           <CardTitle tag="h1" className="text-center text-uppercase my-2">A Famous Quote</CardTitle>
           <CardSubtitle className="text-center text-uppercase font-weight-bold text-secondary">Randomly Selected</CardSubtitle>
@@ -42,7 +42,7 @@ function App() {
           </div>
           <div>
             <hr />
-            <h6 className="text-secondary px-4">
+            <h6 className="text-secondary my-2 px-4">
               <em>Quotations api provided by <a href="https://type.fit/">type.fit</a></em>
             </h6>
           </div>
